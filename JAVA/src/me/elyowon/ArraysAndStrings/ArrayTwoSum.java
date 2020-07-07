@@ -20,7 +20,7 @@ class Solution1{
     HashMap<Integer,Integer> map = new HashMap<Integer, Integer>(); // 해쉬할당
 //    for(int i = 0; i< nums.length; i++) map.put(nums[i],i); // 해쉬에 인풋
 //    for(int i1 = 0; i1<nums.length; i1++){ // 해쉬를 돌면서
-//        Integer i2 = map.get(target - nums[i1]);
+//        Integer i2 = map.get(target - nums[i1]); //key를 찾아오는 map.get(~)
 //        if(i2 != null && i1 !=i2) return new int[]{i1,i2};
 //    }
     for(int i = 0; i<nums.length; i++){ // 해쉬를 돌면서
