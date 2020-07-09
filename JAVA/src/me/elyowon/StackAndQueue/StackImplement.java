@@ -21,7 +21,7 @@ class Stack<T>{
 
     // item을 data에 넣는 Node t를 생성하고
     public void push(T item){
-        Node<T> t = new me.elyowon.StackAndQueue.Stack.Node<T>(item);
+        Node<T> t = new Node<T>(item);
         t.next = top; // top앞에 위치시킨다.
         top = t; //  그리고 t node를 top으로 위치시킨다.
     }
