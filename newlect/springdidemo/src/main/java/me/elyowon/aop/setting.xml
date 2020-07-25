@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd http://www.springframework.org/schema/tool http://www.springframework.org/schema/tool/spring-tool.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:component-scan base-package="main.java.me.elyowon"/>
+<!--    Exam exam = new NewlecExam(); -->
+<!--    네임스페이스를 이용해서 간편하게 입력받을 수 있다. -->
+<!--    <bean id ="exam" class="main.java.me.elyowon.entity.NewlecExam" p:kor="1" p:eng="1"/>-->
+    <bean  class="main.java.me.elyowon.entity.NewlecExam" p:kor="1" p:eng="1"/>
+<!--    <bean id ="exam" class="main.java.me.elyowon.entity.NewlecExam">-->
+<!--        <constructor-arg name="kor" type ="int" value="10"/>-->
+<!--        <constructor-arg name="math" type ="int" value="10"/>-->
+<!--        <constructor-arg name="com"  type ="int" value="10"/>-->
+<!--        <constructor-arg name="eng" type ="int" value="10"/>-->
+<!--    </bean>-->
+<!--    ExamConsole console = new InlineExamConsole; -->
+<!--    <bean id ="console" class="main.java.me.elyowon.ui.InlineExamConsole">-->
+<!--        <property name="Exam" ref="exam"/>-->
+<!--    </bean>-->
+
+
+
+<!--    <util:list id ="exams" list-class="java.util.ArrayList">-->
+<!--            <bean class="main.java.me.elyowon.entity.NewlecExam" p:kor="40" p:eng="30"/>-->
+<!--            <ref bean="exam"/>-->
+<!--    </util:list>-->
+
+<!--    set,get가 아닐때 콜렉션에 대입하는 방식일때-->
+<!--    <bean id="exams" class ="java.util.ArrayList">-->
+<!--        <constructor-arg>-->
+<!--            <list>-->
+<!--                <bean class="main.java.me.elyowon.entity.NewlecExam" p:kor="40" p:eng="30"/>-->
+<!--                <ref bean="exam"/>-->
+<!--            </list>-->
+<!--        </constructor-arg>-->
+<!--    </bean>-->
+</beans>
