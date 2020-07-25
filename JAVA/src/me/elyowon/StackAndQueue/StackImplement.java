@@ -1,10 +1,21 @@
 package me.elyowon.StackAndQueue;
 import java.util.EmptyStackException;
+
+/*
+*   stack stack = new stack(); / 가능
+*   Stack<T> stack = new Stack<T>(); /제너릭 가능
+*   stack.push()/ 데이터삽입
+*   stack.pop() / 데이터삭제
+*   stack.peek() / 현재 top반환
+*   stack.empty()/ 비어있는지판별
+*   stack.search() / 자료가 몇번째에 들어있는지 반환(인덱스x, 자료순번)
+*
+* */
+
 class Stack<T>{
     class Node<T>{
         private T data;
         private Node<T> next;
-
         public Node(T data){
             this.data = data;
         }

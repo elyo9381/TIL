@@ -1,4 +1,4 @@
-package me.elyowon.StackAndQueue;
+package me.elyowon.StackAndQueue.multistack;
 
 import java.util.EmptyStackException;
 /*
