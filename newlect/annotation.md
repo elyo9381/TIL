@@ -39,6 +39,64 @@
     ```   
     빈을 console이름으로 찾을 때 애노테이션을 가지고 찾으려면 @Component와 <context:componentscan base~~>를 이용해야한다. 이때 @Component("console")을 통해서 빈의 이름을 등록할수있다.
 
+## @Component
+
+    컴포넌트는 mvc방식으로 앱을 만들때 mvc를 구성하는 업무용 로직을 컴포넌트라고 한다.    
+
+    ```
+    <property name = "Exam" value = "40"/>
+    <constructor-arg name="eng" type ="int" value="10"/>
+    ```
+    
+    위와같이 밸류에 값을 넣으려고할때는 어떻게 넣을수있을까???    
+    xml에서 값을 넣지 않고 애노테이션을 사용할때는 말이다.   
+ 
+    ```
+    @Value("20")
+    private int kor;
+    ```   
+
+
+## @Configuration
+
+    xml설정파일을 javaConfiguration파일로 바꿀수가있다.
+
+    ```
+    <beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    </beans>
+    ⬇︎⬇︎⬇︎⬇︎⬇︎⬇︎⬇︎⬇︎⬇︎⬇︎⬇︎⬇︎⬇︎⬇︎⬇︎⬇︎⬇︎⬇︎⬇︎⬇︎⬇︎⬇︎⬇︎⬇︎
+    @Configuration
+    public class NewlectDIConfig {
+    
+    }
+    ```   
+
+
+    ```
+     <bean id="exam" class="main.java.me.elyowon.entity.NewlecExam" p:kor="1" p:eng="1"/>
+    ⬇︎⬇︎⬇︎⬇︎⬇︎⬇︎⬇︎⬇︎⬇︎⬇︎⬇︎⬇︎⬇︎⬇︎⬇︎⬇︎⬇︎⬇︎⬇︎⬇︎⬇︎⬇︎⬇︎⬇︎
+    @Bean
+        public Exam exam(){
+            return new NewlecExam();
+            }
+    ```   
+    로 바꿀수있다.   
+    빈의 id는 메소드이름으로 바껴야한다.   
+
+    ```
+    <context:component-scan base-package="main.java.me.elyowon"/>
+    ⬇︎⬇︎⬇︎⬇︎⬇︎⬇︎⬇︎⬇︎⬇︎⬇︎⬇︎⬇︎⬇︎⬇︎⬇︎⬇︎⬇︎⬇︎⬇︎⬇︎⬇︎⬇︎⬇︎⬇︎
+    @ComponentScan
+    ```   
+    으로 변경가능하다.    
+
+    
+
+    ApplicationContext context = Classpath~~   
+    ApplicationContext context = AnnotationConfigureationContext~~~    
+
+    javaConfig 파일을 사용하면 Application 사용도 바꿔줘야한다.
 
 
 

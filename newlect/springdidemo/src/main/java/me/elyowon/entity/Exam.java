@@ -1,5 +1,4 @@
-package main.java.me.elyowon.aop.entity;
-
+package main.java.me.elyowon.entity;
 
 public interface Exam {
     int total();
