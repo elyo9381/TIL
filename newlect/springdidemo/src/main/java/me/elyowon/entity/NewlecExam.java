@@ -1,8 +1,15 @@
-package main.java.me.elyowon.aop.entity;
+package main.java.me.elyowon.entity;
 
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
+
+@Service
 public class NewlecExam implements Exam {
 
+    @Value("20")
     private int kor;
+    @Value("10")
     private int eng;
     private int math;
     private int com;
@@ -20,20 +27,12 @@ public class NewlecExam implements Exam {
 
     @Override
     public int total() {
-        long start = System.currentTimeMillis();
-
-        int result= kor+eng+math+com;
-
-        if(kor> 100)
-            throw new IllegalArgumentException("유효하지 않는 국어점수");
-
-        return result;
+        return kor+eng+math+com;
     }
 
     @Override
     public float avg() {
-        float total =total() / 4.0f;
-        return total;
+        return total() / 4.0f;
     }
 
 

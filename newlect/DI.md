@@ -5,9 +5,11 @@
 composition has a
 ```
 class A
+{
+private B b;
 public A(){
- private B b;
     b = new B();
+    }
 }
 ```
 일체형
@@ -41,7 +43,7 @@ Setter Injection
 B b = new B();
 A a = new A();
 
-a.setB(b);
+>a.setB(b);
 ```
 
 Construction Injection
