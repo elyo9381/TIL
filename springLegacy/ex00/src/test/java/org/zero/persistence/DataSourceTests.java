@@ -38,6 +38,7 @@ public class DataSourceTests {
 				Connection con = dataSource.getConnection() ) {
 			log.info(session);
 			log.info(con);
+			
 		} catch (Exception e) {
 			// TODO: handle exception
 			fail(e.getMessage());
