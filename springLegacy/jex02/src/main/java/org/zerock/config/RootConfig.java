@@ -32,6 +32,8 @@ public class RootConfig {
 		hikariConfig.setUsername("test2");
 		hikariConfig.setPassword("test2");
 		
+	
+		
 		HikariDataSource dataSource = new HikariDataSource(hikariConfig);
 		
 		return dataSource;
