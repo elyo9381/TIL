@@ -1,0 +1,1 @@
+2020-07-20 03:00:31.908  INFO 5088 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'

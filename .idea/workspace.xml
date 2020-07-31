@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8672618c-7dbd-477f-be1e-b9b65b29dbc4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/newlect/springdidemo/src/main/java/me/elyowon/aop/AopProgram.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/newlect/springdidemo/src/main/java/me/elyowon/aop/advice/LogAfterReturningAdvice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/newlect/springdidemo/src/main/java/me/elyowon/aop/advice/LogAfterThrowingAdvice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/newlect/springdidemo/src/main/java/me/elyowon/aop/advice/LogAroundAdvice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/newlect/springdidemo/src/main/java/me/elyowon/aop/advice/LogBeforeAdvice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/newlect/springdidemo/src/main/java/me/elyowon/aop/entity/Exam.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/newlect/springdidemo/src/main/java/me/elyowon/aop/entity/NewlecExam.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/newlect/springdidemo/src/main/java/me/elyowon/aop/setting.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spring-study/elyo-spring-boot-starter/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spring-study/elyo-spring-boot-starter/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spring-study/elyo-spring-boot-starter/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spring-study/elyo-spring-boot-starter/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spring-study/elyo-spring-boot-starter/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spring-study/elyo-spring-boot-starter/elyo-spring-boot-starter.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spring-study/elyo-spring-boot-starter/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spring-study/elyo-spring-boot-starter/src/main/java/me/elyowon/Holoman.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spring-study/elyo-spring-boot-starter/src/main/java/me/elyowon/HolomanConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spring-study/elyo-spring-boot-starter/src/main/java/me/elyowon/HolomanProperties.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spring-study/elyo-spring-boot-starter/src/main/resources/META-INF/spring.factories" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spring-study/elyo-spring-boot-starter/target/classes/META-INF/spring-configuration-metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spring-study/elyo-spring-boot-starter/target/classes/META-INF/spring.factories" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spring-study/elyo-spring-boot-starter/target/classes/me/elyowon/Holoman.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spring-study/elyo-spring-boot-starter/target/classes/me/elyowon/HolomanConfiguration.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spring-study/elyo-spring-boot-starter/target/classes/me/elyowon/HolomanProperties.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spring-study/elyo-spring-boot-starter/target/elyo-spring-boot-starter-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spring-study/elyo-spring-boot-starter/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spring-study/elyo-spring-boot-starter/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spring-study/elyo-spring-boot-starter/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spring-study/elyo-spring-boot-starter/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spring-study/newlect/DI.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spring-study/newlect/DI지시자(xml).md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spring-study/newlect/IoC.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spring-study/spring-boot/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spring-study/spring-boot/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spring-study/spring-boot/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spring-study/spring-boot/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spring-study/spring-boot/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spring-study/spring-boot/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spring-study/spring-boot/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spring-study/spring-boot/src/main/java/me/elyowon/springinit/springboot/Application.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spring-study/spring-boot/src/main/java/me/elyowon/springinit/springboot/user/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spring-study/spring-boot/src/main/java/me/elyowon/springinit/springboot/user/UserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spring-study/spring-boot/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spring-study/spring-boot/src/test/java/me/elyowon/springinit/springboot/ApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spring-study/spring-boot/src/test/java/me/elyowon/springinit/springboot/user/UserControllerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spring-study/spring_framework/record/1.Ioc-container.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spring-study/spring_framework/record/2.IoC_Container setting(Bean).md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spring-study/spring_framework/record/3.IoC_@Autowired.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spring-study/spring_framework/백기선의 스프링 프레임워크 핵심 기술.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spring-study/springtestdemo/src/main/java/me/elyowon/springtestdemo/sample/SampleController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spring-study/springtestdemo/src/main/java/me/elyowon/springtestdemo/sample/SampleService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spring-study/springtestdemo/src/test/java/me/elyowon/springtestdemo/sample/SampleControllerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spring-study/스프링-부트-개념과-활용v3.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/newlect/DI.md" beforeDir="false" afterPath="$PROJECT_DIR$/newlect/DI.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/newlect/DI지시자(xml).md" beforeDir="false" afterPath="$PROJECT_DIR$/newlect/DI지시자(xml).md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/newlect/annotation.md" beforeDir="false" afterPath="$PROJECT_DIR$/newlect/annotation.md" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1fA6ROvDVNIgXALMwCqee77Ynmy" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8672618c-7dbd-477f-be1e-b9b65b29dbc4" name="Default Changelist" comment="" />
+      <created>1595648540806</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1595648540806</updated>
+      <workItem from="1595648542061" duration="26000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+</project>
