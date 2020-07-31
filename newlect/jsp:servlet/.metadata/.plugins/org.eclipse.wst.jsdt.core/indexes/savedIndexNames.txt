@@ -1,0 +1,8 @@
+INDEX VERSION 1.4+/Users/eyw/TIL/newlect/jsp:servlet/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+195329250.index
+1647753274.index
+474176713.index
+33024411.index
+2805135362.index
+1229184038.index
+229759613.index
