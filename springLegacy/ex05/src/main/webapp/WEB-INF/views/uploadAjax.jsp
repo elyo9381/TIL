@@ -8,7 +8,8 @@
 </head>
 <body>
 	<h1>Upload with Ajax</h1>
-		<style>
+
+	<style>
 .uploadResult {
 	width: 100%;
 	background-color: gray;
@@ -30,7 +31,7 @@
 	width: 100px;
 }
 </style>
-	
+
 
 	<div class='uploadDiv'>
 		<input type='file' name='uploadFile' multiple>
@@ -48,8 +49,13 @@
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"
 		integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
 		crossorigin="anonymous"></script>
-	
+
 	<script>
+	/* 나중에 직접 a태그에서 직접 showImage()를 호출할수 있는 방식으로 작성 */
+	function showImage(fileCallPath){
+		alter(fileCallPath);
+	}
+
 	 $(document).ready(function(){
 		 
 		 var regex = new RegExp("(.*?)\.(exe|sh|zip|alz)$");
@@ -70,31 +76,32 @@
 			}
 			
 			var uploadResult = $(".uploadResult ul");
+			 function showUploadedFile(uploadResultArr){
 
-			function showUploadedFile(uploadResultArr) {
+			   var str = "";
 
-			 var str = "";
-		
-				$(uploadResultArr).each(
-						function(i, obj) {
-						       if(!obj.image){
-							          
-							          var fileCallPath =  encodeURIComponent( obj.uploadPath+"/"+ obj.uuid +"_"+obj.fileName);
-							          
-							          str += "<li><a href='/download?fileName="+fileCallPath+"'>" 
-							        		  +"<img src='/resources/img/attach.png'>"+obj.fileName+"</a></li>"
-							        }else{
-							          
-							          var fileCallPath =  encodeURIComponent( obj.uploadPath+ "/s_"+obj.uuid +"_"+obj.fileName);
-							          
-							          str += "<li><img src='/display?fileName="+fileCallPath+"'><li>";
-							        }
-							    });
-							    
-		
-			 uploadResult.append(str);
+			   $(uploadResultArr).each(function(i, obj){
+
+			     if(!obj.image){
+
+			       var fileCallPath =  encodeURIComponent( obj.uploadPath+"/"+ obj.uuid +"_"+obj.fileName);
+
+			       str += "<li><a href='/download?fileName="+fileCallPath+"'><img src='/resources/img/attach.png'>"+obj.fileName+"</a></li>"
+			     }else{
+
+			       var fileCallPath =  encodeURIComponent( obj.uploadPath+ "/s_"+obj.uuid +"_"+obj.fileName);
+
+			       var originPath = obj.uploadPath+ "/"+obj.uuid +"_"+obj.fileName;
+
+			       /* originPath = originPath.replace(new RegExp(/\\/g),"/"); */
+				
+			       str += "<li><a href=\"javascript:showImage(\'"+originPath+"\')\"><img src='/display?fileName="+fileCallPath+"'></a><li>";
+
+			     }
+			   });
+
+			   uploadResult.append(str);
 			 }
-
 
 
 			var cloneObj = $(".uploadDiv").clone();
