@@ -44,8 +44,7 @@
 		</selectKey>
 
 		insert into tbl_board (bno,title,content, writer)
-		values (#{bno},
-		#{title}, #{content}, #{writer})
+		values (#{bno},#{title}, #{content}, #{writer})
 	</insert>
 
 	<select id="read" resultType="org.zerock.domain.BoardVO">

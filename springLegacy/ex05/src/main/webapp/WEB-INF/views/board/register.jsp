@@ -81,32 +81,26 @@
 	$(document).ready(function(e){
 		 var formObj = $("form[role='form']");
 		  
-		  $("button[type='submit']").on("click", function(e){
+		 $("button[type='submit']").on("click", function(e){
 		    
 		    e.preventDefault();
-		    
 		    console.log("submit clicked");
-		    
 		    var str = "";
 		    
-		    $(".uploadResult ul li").each(function(i, obj){
-		      
-		      var jobj = $(obj);
-		      
-		      console.dir(jobj);
-		      console.log("-------------------------");
-		      console.log(jobj.data("filename"));
-		      
-		      
-		      str += "<input type='hidden' name='attachList["+i+"].fileName' value='"+jobj.data("filename")+"'>";
-		      str += "<input type='hidden' name='attachList["+i+"].uuid' value='"+jobj.data("uuid")+"'>";
-		      str += "<input type='hidden' name='attachList["+i+"].uploadPath' value='"+jobj.data("path")+"'>";
-		      str += "<input type='hidden' name='attachList["+i+"].fileType' value='"+ jobj.data("type")+"'>";
-		      
-		    });
-		    
+		    	$(".uploadResult ul li").each(function(i, obj){
+		      	
+			      var jobj = $(obj);
+			      
+			      console.dir(jobj);
+			      console.log("-------------------------");
+			      console.log(jobj.data("filename"));
+			      
+			      str += "<input type='hidden' name='attachList["+i+"].fileName' value='"+jobj.data("filename")+"'>";
+			      str += "<input type='hidden' name='attachList["+i+"].uuid' value='"+jobj.data("uuid")+"'>";
+			      str += "<input type='hidden' name='attachList["+i+"].uploadPath' value='"+jobj.data("path")+"'>";
+			      str += "<input type='hidden' name='attachList["+i+"].fileType' value='"+ jobj.data("type")+"'>";
+		    	});
 		    console.log(str);
-		    
 		    formObj.append(str).submit();
 		    
 		  });
@@ -222,14 +216,10 @@
 						str += "</div>";
 						str +"</li>";
 					}
-
 			    });
-			    
 			    uploadUL.append(str);
 			  }
-		  
-		  
-		  
+
 		  $(".uploadResult").on("click", "button", function(e){
 			    
 			    console.log("delete file");

@@ -225,7 +225,7 @@
 			<version>2.9.5</version>
 		</dependency>
 
-
+<!-- Quartz 라이브러리는 일반적으로 스케줄러를 구성하기 위해서 사용합니다. -->
 	<!-- https://mvnrepository.com/artifact/org.quartz-scheduler/quartz -->
 	<dependency>
 		<groupId>org.quartz-scheduler</groupId>
