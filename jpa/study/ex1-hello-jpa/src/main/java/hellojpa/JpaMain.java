@@ -84,18 +84,55 @@ public class JpaMain {
 
 //             엔티티 삭제
 //                Member memberA = em.find(Member.class,"memberA");
-//                em.remove(memberA);
+//                em.remove(memberA) ;
 
             // 플러시
 
             // 준영속 상태들어가는 방법
 
 
+            // 4강 필드와 컬럼매핑
+//            Member member = new Member();
+//            member.setId(3L);
+//            member.setUsername("A");
+//            member.setRoleType(RoleType.USER);
+//            em.persist(member);
 
+            // 5강 연관관계 매핑
+
+
+//
+//            // 데이터 기반 쿼리 코드(연관관계 설정 x)
+//            Member member = new Member();
+//            member.setName("member1");
+//            member.setTeamId(team.getId()); // 왜래키 식별자를 직접 다룸
+//            em.persist(member);
+
+            Team team = new Team();
+            team.setName("TeamA");
+            em.persist(team);
+
+            // 연관관계설정
+            Member member = new Member();
+            member.setName("memeber1");
+            member.setTeam(team);
+            em.persist(member);
+
+            em.flush();
+            em.clear();
+
+            // 연관관계 설정시 그래프 탐색
+            Member findMember = em.find(Member.class,member.getId());
+            List<Member> members = findMember.getTeam().getMembers();
+
+            for(Member m : members){
+                System.out.println("m = " + m.getName());
+                System.out.println("team name = " + m.getTeam().getName());
+            }
 
 
             tx.commit();
-        } catch (Exception e){
+        } catch (Exception e) {
             tx.rollback();
         } finally {
             em.close();
