@@ -2,6 +2,8 @@ package jpabook.jpashop;
 
 import jpabook.jpashop.domain.Member;
 import jpabook.jpashop.domain.Order;
+import jpabook.jpashop.domain.OrderItem;
+import org.hibernate.sql.ordering.antlr.OrderByAliasResolver;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -21,17 +23,9 @@ public class JpaMain {
         tx.begin();
 
         try {
-            // 데이터중심 설계의 문제점
-            // 테이블의 외래키를 객체에 그대로 가져옴
-            // 객체 그래프 탐색이 불가능
-            // 참조가 없으므로 UML도 잘못됨
-            Order order = em.find(Order.class,1L);
-            Long memberId = order.getMemberId();
 
-            Member member = em.find(Member.class, memberId);
-
-            Member findMember = order.getMember();
-            // 연관관계를 설정치 못하니 위와 같은 객체 스타일의 코딩이 안된다.
+            Order order = new Order();
+            order.addOrderItem(new OrderItem());
 
             tx.commit();
         } catch (Exception e){
