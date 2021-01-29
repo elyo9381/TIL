@@ -2,6 +2,7 @@ package hellojpa;
 
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 import java.util.Date;
 
 //@Entity // table을 놓는다.
@@ -10,7 +11,7 @@ import java.util.Date;
 // @Table(uniqueConstraints = {@UniqueConstraint( name = "NAME_AGE_UNIQUE", columnNames = {"NAME", "AGE"} )})
 // DDL생성 기능은 DDL을 자동 생성할 때만 사용되고 jpa의 실행 로직에는 영향을 주지 않는다.
 @Entity
-public class Member {
+public class Member extends BaseEntity {
 
     @Id
     @GeneratedValue()
@@ -26,6 +27,7 @@ public class Member {
     @ManyToOne
     @JoinColumn(name = "TEAM_ID")
     private Team team;
+
 
     public Long getId() {
         return id;
@@ -57,5 +59,11 @@ public class Member {
 
     public void setTeam(Team team) {
         this.team = team;
+    }
+
+    public void changeTeam(Team team) {
+        this.team = team;
+        // 양방향 편의메소드 주인에서 팀추가
+        team.getMembers().add(this);
     }
 }

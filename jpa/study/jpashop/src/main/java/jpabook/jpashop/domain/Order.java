@@ -8,7 +8,7 @@ import java.util.List;
 
 @Entity
 @Table(name = "ORDERS") // ORDER는 DB에서 예약어로 걸린상황이 많음
-public class Order {
+public class Order extends BaseEntity {
 
     @Id @GeneratedValue()
     @Column(name = "ORDER_ID")

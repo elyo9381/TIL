@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-public class Team {
+public class Team extends BaseEntity{
 
     @Id @GeneratedValue()
     @Column(name = "TEAM_ID")
@@ -15,10 +15,13 @@ public class Team {
 
 
     // mappedBy는 Member의 Team타입의 team에 연결되어있다는 뜻
-    // mappedBy
     @OneToMany(mappedBy = "team")
     private List<Member> members = new ArrayList<>();
 
+    public void addMember(Member member) {
+        member.setTeam(this);
+        members.add(member);
+    }
 
     public List<Member> getMembers() {
         return members;
@@ -45,4 +48,5 @@ public class Team {
     public void setName(String name) {
         this.name = name;
     }
+
 }

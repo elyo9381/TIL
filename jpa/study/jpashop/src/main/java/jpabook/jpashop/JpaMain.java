@@ -1,5 +1,6 @@
 package jpabook.jpashop;
 
+import jpabook.jpashop.domain.Book;
 import jpabook.jpashop.domain.Member;
 import jpabook.jpashop.domain.Order;
 import jpabook.jpashop.domain.OrderItem;
@@ -24,8 +25,16 @@ public class JpaMain {
 
         try {
 
-            Order order = new Order();
-            order.addOrderItem(new OrderItem());
+            // 연관관계 설정 테스트
+//            Order order = new Order();
+//            order.addOrderItem(new OrderItem());
+
+            // 정규화,단일테이블 관련 테스트
+            Book book = new Book();
+            book.setName("JPA");
+            book.setAuthor("원요엘");
+
+            em.persist(book);
 
             tx.commit();
         } catch (Exception e){
