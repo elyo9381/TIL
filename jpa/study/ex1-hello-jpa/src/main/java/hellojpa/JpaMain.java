@@ -4,6 +4,8 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
+import java.rmi.MarshalledObject;
+import java.time.LocalDateTime;
 import java.util.List;
 
 public class JpaMain {
@@ -98,37 +100,73 @@ public class JpaMain {
 //            member.setRoleType(RoleType.USER);
 //            em.persist(member);
 
-            // 5강 연관관계 매핑
+//             5강 연관관계 매핑
 
 
-//
+
 //            // 데이터 기반 쿼리 코드(연관관계 설정 x)
 //            Member member = new Member();
 //            member.setName("member1");
 //            member.setTeamId(team.getId()); // 왜래키 식별자를 직접 다룸
 //            em.persist(member);
 
-            Team team = new Team();
-            team.setName("TeamA");
-            em.persist(team);
+//            Team team = new Team();
+//            team.setName("TeamA");
+////            team.getMembers().add(member);// mappedBy 의해서 주인이 아니다.
+//            em.persist(team);
+//
+//            // 연관관계설정
+//            Member member = new Member();
+//            member.setName("memeber1");
+////            member.changeTeam(team); // 멤버에 팀을 추가
+//            em.persist(member);
+//
+//            team.addMember(member); // 팀에 멤버를 추가
+//            // <양방향 객체 jpa 참조할시 둘중에 한곳에서만 하는게 났다. >
+//
+//            // 양쪽으로 데이터를 넣어야한다. 왜? 한쪽으로 넣으면 commit 날리기 전에
+//            // 멤버에 팀을 넣거나 팀에 멤버를 넣을수없으므로
+//            // 그렇다면 어떻게 해야하나? 양방향 편의 메소드를 생성하라
+//
+////            em.flush();
+////            em.clear();
+//
+//            // 연관관계 설정시 그래프 탐색
+//            Member findMember = em.find(Member.class,member.getId());
+//            List<Member> members = findMember.getTeam().getMembers();
+//
+//            System.out.println("================");
+//            for(Member m : members){
+//                System.out.println("m = " + m.getName());
+////                System.out.println("team name = " + m.getTeam().getName());
+//            }
+//            System.out.println("================");
+//            // 가장 많이 하는 양방향 실수 to.string,loombok,json 생성라이브러리
 
-            // 연관관계설정
+
+            // 고급매핑 (정규화, 단일 테이블 전략 등등)
+//
+//            Movie movie = new Movie();
+//            movie.setDirector("aaa");
+//            movie.setActor("BBB");
+//            movie.setName("바람과함께사라지다.");
+//            movie.setPrice(1000);
+//            em.persist(movie);
+//            Movie findMovie = em.find(Movie.class,movie.getId());
+//            System.out.println("findMovie = "+findMovie);
+
+            //mappedsuperclass
+
             Member member = new Member();
-            member.setName("memeber1");
-            member.setTeam(team);
+            member.setName("user1");
+            member.setCreateBy("won");
+            member.setCreateDate(LocalDateTime.now());
+
             em.persist(member);
+
 
             em.flush();
             em.clear();
-
-            // 연관관계 설정시 그래프 탐색
-            Member findMember = em.find(Member.class,member.getId());
-            List<Member> members = findMember.getTeam().getMembers();
-
-            for(Member m : members){
-                System.out.println("m = " + m.getName());
-                System.out.println("team name = " + m.getTeam().getName());
-            }
 
 
             tx.commit();
