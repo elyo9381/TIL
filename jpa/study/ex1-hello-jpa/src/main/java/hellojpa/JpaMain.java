@@ -1,9 +1,14 @@
 package hellojpa;
 
+import org.hibernate.Criteria;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Root;
 import java.rmi.MarshalledObject;
 import java.time.LocalDateTime;
 import java.util.List;
@@ -157,16 +162,59 @@ public class JpaMain {
 
             //mappedsuperclass
 
-            Member member = new Member();
-            member.setName("user1");
-            member.setCreateBy("won");
-            member.setCreateDate(LocalDateTime.now());
+//            Member member = new Member();
+//            member.setName("hello");
+//
+//            em.persist(member);
+//
+//            em.flush();
+//            em.clear();
+//            //Member findMember = em.find(Member.class,member.getId());
+//            Member findMember = em.getReference(Member.class,member.getId());
+//            System.out.println("findMember = " + findMember.getName());
 
-            em.persist(member);
+//            Child child1 = new Child();
+//            Child child2 = new Child();
+//
+//            Parent parent = new Parent();
+//            parent.addChild(child1);
+//            parent.addChild(child2);
+//
+//            em.persist(parent);
+//            em.persist(child1);
+//            em.persist(child2);
 
+            //값타입과 불변객체(임베디드 타입 사용)
+//            Address address = new Address("city","street","10000");
+//            Member member = new Member();
+//            member.setName("aaa");
+//            member.setHomeAddress(address);
+//            em.persist(member);
+//
+//            Member member2 = new Member();
+//            member2.setName("bbb");
+//            member2.setHomeAddress(address);
+//            em.persist(member2);
+//
+//            member.getHomeAddress().setCity("newCity");
 
-            em.flush();
-            em.clear();
+            //JPQL
+//            List<Member> result = em.createQuery(
+//                    "select m from Member as m where m.name like '%kim%'",
+//                    Member.class
+//            ).getResultList();
+
+            // jpql - criteria (하지만 실무에서는 잘 사용치 않는다.)
+//            CriteriaBuilder cb = em.getCriteriaBuilder();
+//            CriteriaQuery<Member> query = cb.createQuery(Member.class);
+//
+//            // 루트 클래스 (조회를 시작할 클래스)
+//            Root<Member> m  = query.from(Member.class);
+//
+//            // 쿼리생성
+//            CriteriaQuery<Member> cq = query.select(m).where(cb.equal(m.get("name"),"won"));
+//            List<Member> resultList = em.createQuery(cq).getResultList();
+
 
 
             tx.commit();
@@ -178,4 +226,5 @@ public class JpaMain {
         emf.close();
 
     }
+
 }
