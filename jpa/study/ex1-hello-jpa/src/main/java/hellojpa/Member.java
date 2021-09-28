@@ -20,11 +20,35 @@ public class Member extends BaseEntity {
     @Column(name = "USERNAME")
     private String name;
 
-//    데이터기반의 설계
+    // 기간
+    @Embedded
+    private Period workPeriod;
+
+    // 주소
+    @Embedded
+    private Address homeAddress;
+
+    public Period getWorkPeriod() {
+        return workPeriod;
+    }
+
+    public void setWorkPeriod(Period workPeriod) {
+        this.workPeriod = workPeriod;
+    }
+
+    public Address getHomeAddress() {
+        return homeAddress;
+    }
+
+    public void setHomeAddress(Address homeAddress) {
+        this.homeAddress = homeAddress;
+    }
+
+    //    데이터기반의 설계
 //    @Column(name = "TEAM_ID")
 //    private Long teamId;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY) // 프록시로 가져온다.
     @JoinColumn(name = "TEAM_ID")
     private Team team;
 
@@ -66,4 +90,5 @@ public class Member extends BaseEntity {
         // 양방향 편의메소드 주인에서 팀추가
         team.getMembers().add(this);
     }
+
 }
