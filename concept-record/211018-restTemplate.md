@@ -32,3 +32,20 @@ webClinet는 논블럭킹 비동기 콜이 가능합니다.
 webClient또한 restTemplate와 동일합니다.  WebClient.Builder를 빈으로 등록 가능합니다. 
 
 webClientBuild.baseUrl("~~").build();
+
+### RestTemplate 사용방법
+
+- postforEntity메소드 url, request, responseType등을 파라미터로 지정하여 작성합니다.
+- exchange메소드는 Object 및 response를 반환하는 암시적 메소드입니다.
+- exchange는  url, httpMathod, request, responseType등을 파라미터로 받습니다.
+- 헤더 정보를 넣기 위해서는 HttpHeaders()를 사용합니다. UrlBuilder는 이제 사용하지 않습니다.
+
+### open Feign
+
+- REST Call을 추상화 한 spring colud netflix 라이브러리
+- Load balanced  지원
+
+사용방법
+
+- 호출하려는 HTTP EndPoint에 대한 interface를 생성
+- @FeignClient 선언
