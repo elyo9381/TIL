@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "2b2ad89239ecb215",
+        "id": "0b70462e26e76892",
         "type": "tabs",
         "children": [
           {
-            "id": "b2925b8d1b78444d",
+            "id": "b11ac6e99d71ef73",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "refactoring-old-file/정리필요/DataStruct/82. 순열구하기(dfs 이용).md",
-                "mode": "preview",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -85,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "refactoring-old-file/정리필요/DataStruct/82. 순열구하기(dfs 이용).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "refactoring-old-file/정리필요/DataStruct/82. 순열구하기(dfs 이용).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "refactoring-old-file/정리필요/DataStruct/82. 순열구하기(dfs 이용).md"
-              }
+              "state": {}
             }
           },
           {
@@ -148,11 +140,12 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -164,17 +157,17 @@
       "command-palette:명령어 팔레트 열기": false
     }
   },
-  "active": "b2925b8d1b78444d",
+  "active": "b11ac6e99d71ef73",
   "lastOpenFiles": [
-    "DataStruct/Stack.md",
     "refactoring-old-file/정리필요/DataStruct/82. 순열구하기(dfs 이용).md",
+    "DataStruct/Stack.md",
     "무제 파일.md",
     "DataStruct",
     "refactoring-old-file/정리필요/DataStruct/31. 탄화수소 질량.md",
     "README.md",
     "refactoring-old-file",
     "무제 폴더 1",
-    "Mong",
+    "NoSQL",
     "RDB",
     "Docker",
     "OS",
