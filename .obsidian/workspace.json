@@ -4,35 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "723d27e4dedc64d3",
+        "id": "2b2ad89239ecb215",
         "type": "tabs",
         "children": [
           {
-            "id": "56b7edfc6f8752ba",
+            "id": "b2925b8d1b78444d",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "README.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "66a9d5d2d3c817d6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "README.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -82,7 +65,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 228.5
   },
   "right": {
     "id": "af8645db02afce3f",
@@ -98,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "README.md"
-              }
+              "state": {}
             }
           },
           {
@@ -177,16 +156,16 @@
       "command-palette:명령어 팔레트 열기": false
     }
   },
-  "active": "66a9d5d2d3c817d6",
+  "active": "b2925b8d1b78444d",
   "lastOpenFiles": [
-    "무제 파일.md",
-    "OLD - rerange-need",
     "README.md",
+    "무제 파일.md",
+    "refactoring-old-file",
     "무제 폴더 1",
     "Mong",
     "RDB",
     "Docker",
     "OS",
-    "날짜별/2023-04-20.md"
+    "refactoring-old-file/날짜별/2023-04-20.md"
   ]
 }
