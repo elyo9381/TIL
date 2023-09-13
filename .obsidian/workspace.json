@@ -22,7 +22,7 @@
               "type": "markdown",
               "state": {
                 "file": "무제 파일.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               }
             }
@@ -175,7 +175,9 @@
   },
   "active": "f1565b8cce3ef9a4",
   "lastOpenFiles": [
+    "dataStruct/Stack.md",
     "무제 파일.md",
+    "dataStruct",
     "refactoring-old-file/정리필요/DataStruct/31. 탄화수소 질량.md",
     "README.md",
     "refactoring-old-file",
