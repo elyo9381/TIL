@@ -11,24 +11,15 @@
             "id": "b2925b8d1b78444d",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {}
-            }
-          },
-          {
-            "id": "f1565b8cce3ef9a4",
-            "type": "leaf",
-            "state": {
               "type": "markdown",
               "state": {
-                "file": "무제 파일.md",
+                "file": "refactoring-old-file/정리필요/DataStruct/82. 순열구하기(dfs 이용).md",
                 "mode": "preview",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -94,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "무제 파일.md",
+                "file": "refactoring-old-file/정리필요/DataStruct/82. 순열구하기(dfs 이용).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "무제 파일.md",
+                "file": "refactoring-old-file/정리필요/DataStruct/82. 순열구하기(dfs 이용).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "무제 파일.md"
+                "file": "refactoring-old-file/정리필요/DataStruct/82. 순열구하기(dfs 이용).md"
               }
             }
           },
@@ -173,9 +164,10 @@
       "command-palette:명령어 팔레트 열기": false
     }
   },
-  "active": "f1565b8cce3ef9a4",
+  "active": "b2925b8d1b78444d",
   "lastOpenFiles": [
     "dataStruct/Stack.md",
+    "refactoring-old-file/정리필요/DataStruct/82. 순열구하기(dfs 이용).md",
     "무제 파일.md",
     "dataStruct",
     "refactoring-old-file/정리필요/DataStruct/31. 탄화수소 질량.md",
