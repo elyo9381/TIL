@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "0b70462e26e76892",
+        "id": "96c2db488d17f36f",
         "type": "tabs",
         "children": [
           {
-            "id": "b11ac6e99d71ef73",
+            "id": "469e5d974946d915",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -157,7 +157,7 @@
       "command-palette:명령어 팔레트 열기": false
     }
   },
-  "active": "b11ac6e99d71ef73",
+  "active": "469e5d974946d915",
   "lastOpenFiles": [
     "refactoring-old-file/정리필요/DataStruct/82. 순열구하기(dfs 이용).md",
     "DataStruct/Stack.md",
