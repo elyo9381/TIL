@@ -21,7 +21,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "mermaid.md",
+                "file": "Util/mermaid.md",
                 "mode": "source",
                 "source": false
               }
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "mermaid.md",
+                "file": "Util/mermaid.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "mermaid.md",
+                "file": "Util/mermaid.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "mermaid.md"
+                "file": "Util/mermaid.md"
               }
             }
           },
@@ -174,9 +174,10 @@
       "command-palette:명령어 팔레트 열기": false
     }
   },
-  "active": "4a558d746a2d835f",
+  "active": "4231573e9d434521",
   "lastOpenFiles": [
-    "mermaid.md",
+    "Util",
+    "Util/mermaid.md",
     "refactoring-old-file/정리필요/DataStruct/82. 순열구하기(dfs 이용).md",
     "DataStruct/Stack.md",
     "DataStruct",
