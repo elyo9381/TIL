@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "b34bfa36258949b2",
+        "id": "02829636289064b5",
         "type": "tabs",
         "children": [
           {
-            "id": "54595c94f62333df",
+            "id": "d2817f7ebc7bf285",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "dataStruct/Stack.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -85,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "dataStruct/Stack.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "dataStruct/Stack.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -120,29 +114,19 @@
             }
           },
           {
-            "id": "c975a483c439908e",
+            "id": "2af7c8ca51d9252a",
             "type": "leaf",
             "state": {
-              "type": "outline",
-              "state": {
-                "file": "dataStruct/Stack.md"
-              }
-            }
-          },
-          {
-            "id": "c114c9d93dd97590",
-            "type": "leaf",
-            "state": {
-              "type": "git-history-view",
+              "type": "git-view",
               "state": {}
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 244.5
+    "width": 365.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -154,8 +138,10 @@
       "command-palette:명령어 팔레트 열기": false
     }
   },
-  "active": "54595c94f62333df",
+  "active": "2af7c8ca51d9252a",
   "lastOpenFiles": [
+    "README.md",
+    "dataStruct/Stack.md",
     "Util/mermaid.md",
     "refactoring-old-file/정리필요/DataStruct/29. 3의 갯수는(small).md",
     "refactoring-old-file/정리필요/DataStruct/27.N!의 표현법.md",
@@ -180,8 +166,6 @@
     "refactoring-old-file/정리필요/DataStruct/91. 네트워크 선 자르기(bottom-up) - 동적계획법.md",
     "refactoring-old-file/정리필요/DataStruct/76. 이항계수(메모이제이션).md",
     "refactoring-old-file/정리필요/DataStruct/12.total num (large).md",
-    "refactoring-old-file/정리필요/DataStruct/33. 3등의 성적은?.md",
-    "refactoring-old-file/정리필요/DataStruct/23.연속 부분 증가수열.md",
     "refactoring-old-file/정리필요/concept-record/제목 없음 0fc0bf7d795d4691a1018dfee2f9c55e/Untitled.png",
     "refactoring-old-file/정리필요/linux/linux-commandline-tool",
     "refactoring-old-file/정리필요/linux/life coding linux",
