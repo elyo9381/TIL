@@ -1,14 +1,14 @@
 {
   "main": {
-    "id": "e81a3626c6407f97",
+    "id": "7516227c31acf7f2",
     "type": "split",
     "children": [
       {
-        "id": "0037851dc035fdce",
+        "id": "a0fbdfda9abb5f0e",
         "type": "tabs",
         "children": [
           {
-            "id": "c05b1492f82796d2",
+            "id": "b9152b8aa5eaa8a6",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -21,15 +21,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "7f5ddd6ee35ea1b6",
+    "id": "2f614e2e34e6c6d7",
     "type": "split",
     "children": [
       {
-        "id": "8f7c2c0a53745167",
+        "id": "82e405d7459970de",
         "type": "tabs",
         "children": [
           {
-            "id": "ba2710fa91252b9c",
+            "id": "9669e70d0b137cac",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -39,7 +39,7 @@
             }
           },
           {
-            "id": "6652fe73303ce386",
+            "id": "f688bec04f7857eb",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -54,7 +54,7 @@
             }
           },
           {
-            "id": "473f96647ab5d848",
+            "id": "f34b2be250c0c6d9",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -68,15 +68,15 @@
     "width": 300
   },
   "right": {
-    "id": "2ad28eb634795168",
+    "id": "c580296b24ecf43d",
     "type": "split",
     "children": [
       {
-        "id": "998679514e2d1384",
+        "id": "aa37bc90b33da296",
         "type": "tabs",
         "children": [
           {
-            "id": "823d0175b4b5a977",
+            "id": "9886ccabce6d9687",
             "type": "leaf",
             "state": {
               "type": "backlink",
@@ -92,7 +92,7 @@
             }
           },
           {
-            "id": "1c392a63296bdabd",
+            "id": "203c1b45872e08f7",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
@@ -103,7 +103,7 @@
             }
           },
           {
-            "id": "f9d581ff805aa89d",
+            "id": "9cf0c9e5d208bc90",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -114,7 +114,7 @@
             }
           },
           {
-            "id": "73e300ee8212dc59",
+            "id": "f8dc73f11dacafff",
             "type": "leaf",
             "state": {
               "type": "outline",
@@ -138,8 +138,6 @@
       "command-palette:명령어 팔레트 열기": false
     }
   },
-  "active": "ba2710fa91252b9c",
-  "lastOpenFiles": [
-    "무제 파일.md"
-  ]
+  "active": "9669e70d0b137cac",
+  "lastOpenFiles": []
 }
