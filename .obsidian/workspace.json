@@ -1,0 +1,198 @@
+{
+  "main": {
+    "id": "053677fac6d2d51e",
+    "type": "split",
+    "children": [
+      {
+        "id": "b34bfa36258949b2",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "54595c94f62333df",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "dataStruct/Stack.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "e6b3400305a9ae56",
+    "type": "split",
+    "children": [
+      {
+        "id": "4f90b2bd4393d997",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0b698951d7034f64",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "fdf5163b109de08a",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "1da7c9a78f176ed7",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "d0a61ed46b34897c",
+    "type": "split",
+    "children": [
+      {
+        "id": "cc84a2d2148d681f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4784dfc2fff7cf86",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "dataStruct/Stack.md",
+                "collapseAll": true,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "761a5eeacdf4025e",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "dataStruct/Stack.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "326b59760a19b35e",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "c975a483c439908e",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "dataStruct/Stack.md"
+              }
+            }
+          },
+          {
+            "id": "c114c9d93dd97590",
+            "type": "leaf",
+            "state": {
+              "type": "git-history-view",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 244.5
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:퀵 스위처 열기": false,
+      "graph:그래프 뷰 열기": false,
+      "canvas:새 캔버스 만들기": false,
+      "daily-notes:오늘의 데일리 노트 열기": false,
+      "templates:템플릿 삽입": false,
+      "command-palette:명령어 팔레트 열기": false
+    }
+  },
+  "active": "54595c94f62333df",
+  "lastOpenFiles": [
+    "Util/mermaid.md",
+    "refactoring-old-file/정리필요/DataStruct/29. 3의 갯수는(small).md",
+    "refactoring-old-file/정리필요/DataStruct/27.N!의 표현법.md",
+    "refactoring-old-file/정리필요/DataStruct/65.미로탐색(그래프 DFS).md",
+    "refactoring-old-file/정리필요/DataStruct/59. 재귀를 통한 부분집합.md",
+    "refactoring-old-file/정리필요/DataStruct/66. 경로탐색(방향그래프 인접릭스트 DFS).md",
+    "refactoring-old-file/정리필요/DataStruct/54. 올바른 괄호(stack).md",
+    "refactoring-old-file/정리필요/DataStruct/37. Least Recently Used(kakao example).md",
+    "refactoring-old-file/정리필요/DataStruct/28.N!에서 0의 개수.md",
+    "refactoring-old-file/정리필요/DataStruct/87. 선나라 아일랜드(BFS활용).md",
+    "refactoring-old-file/정리필요/DataStruct/18.층간소음.md",
+    "refactoring-old-file/정리필요/DataStruct/17. 선생님 퀴즈.md",
+    "refactoring-old-file/정리필요/DataStruct/50. 영지의갯수(small).md",
+    "refactoring-old-file/정리필요/DataStruct/78. 원더랜드 (크루스칼 Union&Find 활용).md",
+    "refactoring-old-file/정리필요/DataStruct/2.Sum of natural numbers.md",
+    "refactoring-old-file/정리필요/DataStruct/42.이분 검색.md",
+    "refactoring-old-file/정리필요/DataStruct/47. 봉우리.md",
+    "refactoring-old-file/정리필요/DataStruct/73. 최대힙 (STL priority_queue : 우선순위큐).md",
+    "refactoring-old-file/정리필요/DataStruct/82. 순열구하기(dfs 이용).md",
+    "refactoring-old-file/정리필요/DataStruct/86. 피자 배달 거리(dfs활용).md",
+    "refactoring-old-file/정리필요/DataStruct/38. Inversion Sequence.md",
+    "refactoring-old-file/정리필요/DataStruct/91. 네트워크 선 자르기(bottom-up) - 동적계획법.md",
+    "refactoring-old-file/정리필요/DataStruct/76. 이항계수(메모이제이션).md",
+    "refactoring-old-file/정리필요/DataStruct/12.total num (large).md",
+    "refactoring-old-file/정리필요/DataStruct/33. 3등의 성적은?.md",
+    "refactoring-old-file/정리필요/DataStruct/23.연속 부분 증가수열.md",
+    "refactoring-old-file/정리필요/concept-record/제목 없음 0fc0bf7d795d4691a1018dfee2f9c55e/Untitled.png",
+    "refactoring-old-file/정리필요/linux/linux-commandline-tool",
+    "refactoring-old-file/정리필요/linux/life coding linux",
+    "refactoring-old-file/정리필요/concept-record/제목 없음 0fc0bf7d795d4691a1018dfee2f9c55e",
+    "refactoring-old-file/정리필요/linux",
+    "refactoring-old-file/정리필요/concept-record",
+    "refactoring-old-file/정리필요/DataStruct",
+    "refactoring-old-file/정리필요",
+    "refactoring-old-file/블로그/대용량 서비스",
+    "refactoring-old-file/블로그/inqueue",
+    "refactoring-old-file/블로그",
+    "TIL/refactoring-old-file/정리필요/concept-record/제목 없음 0fc0bf7d795d4691a1018dfee2f9c55e/Untitled.png"
+  ]
+}
