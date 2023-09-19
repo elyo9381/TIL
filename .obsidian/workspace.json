@@ -1,35 +1,48 @@
 {
   "main": {
-    "id": "053677fac6d2d51e",
+    "id": "2d886473e912d6db",
     "type": "split",
     "children": [
       {
-        "id": "02829636289064b5",
+        "id": "96c2db488d17f36f",
         "type": "tabs",
         "children": [
           {
-            "id": "d2817f7ebc7bf285",
+            "id": "469e5d974946d915",
             "type": "leaf",
             "state": {
               "type": "empty",
               "state": {}
             }
+          },
+          {
+            "id": "4a558d746a2d835f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Util/mermaid.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "e6b3400305a9ae56",
+    "id": "bcc2745d86ba14ec",
     "type": "split",
     "children": [
       {
-        "id": "4f90b2bd4393d997",
+        "id": "478f1d13316307d8",
         "type": "tabs",
         "children": [
           {
-            "id": "0b698951d7034f64",
+            "id": "4231573e9d434521",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -39,7 +52,7 @@
             }
           },
           {
-            "id": "fdf5163b109de08a",
+            "id": "368b73e89347dbd9",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -54,7 +67,7 @@
             }
           },
           {
-            "id": "1da7c9a78f176ed7",
+            "id": "771d332dbd16a3b8",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -65,23 +78,24 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 228.5
   },
   "right": {
-    "id": "d0a61ed46b34897c",
+    "id": "af8645db02afce3f",
     "type": "split",
     "children": [
       {
-        "id": "cc84a2d2148d681f",
+        "id": "2d6f3a26693c8392",
         "type": "tabs",
         "children": [
           {
-            "id": "4784dfc2fff7cf86",
+            "id": "d7e4616abf2eedaf",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "collapseAll": true,
+                "file": "Util/mermaid.md",
+                "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
@@ -92,18 +106,19 @@
             }
           },
           {
-            "id": "761a5eeacdf4025e",
+            "id": "f2b8ea88e4bdfa5e",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Util/mermaid.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "326b59760a19b35e",
+            "id": "e9c45d495a6b3478",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -114,19 +129,39 @@
             }
           },
           {
-            "id": "2af7c8ca51d9252a",
+            "id": "a31272aef612c42a",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Util/mermaid.md"
+              }
+            }
+          },
+          {
+            "id": "3379aaac61d2f640",
             "type": "leaf",
             "state": {
               "type": "git-view",
               "state": {}
             }
+          },
+          {
+            "id": "b6be9c7018d6dec5",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency"
+              }
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 365.5
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -138,45 +173,22 @@
       "command-palette:명령어 팔레트 열기": false
     }
   },
-  "active": "2af7c8ca51d9252a",
+  "active": "4a558d746a2d835f",
   "lastOpenFiles": [
-    "README.md",
-    "dataStruct/Stack.md",
+    "conflict-files-obsidian-git.md",
     "Util/mermaid.md",
-    "refactoring-old-file/정리필요/DataStruct/29. 3의 갯수는(small).md",
-    "refactoring-old-file/정리필요/DataStruct/27.N!의 표현법.md",
-    "refactoring-old-file/정리필요/DataStruct/65.미로탐색(그래프 DFS).md",
-    "refactoring-old-file/정리필요/DataStruct/59. 재귀를 통한 부분집합.md",
-    "refactoring-old-file/정리필요/DataStruct/66. 경로탐색(방향그래프 인접릭스트 DFS).md",
-    "refactoring-old-file/정리필요/DataStruct/54. 올바른 괄호(stack).md",
-    "refactoring-old-file/정리필요/DataStruct/37. Least Recently Used(kakao example).md",
-    "refactoring-old-file/정리필요/DataStruct/28.N!에서 0의 개수.md",
-    "refactoring-old-file/정리필요/DataStruct/87. 선나라 아일랜드(BFS활용).md",
-    "refactoring-old-file/정리필요/DataStruct/18.층간소음.md",
-    "refactoring-old-file/정리필요/DataStruct/17. 선생님 퀴즈.md",
-    "refactoring-old-file/정리필요/DataStruct/50. 영지의갯수(small).md",
-    "refactoring-old-file/정리필요/DataStruct/78. 원더랜드 (크루스칼 Union&Find 활용).md",
-    "refactoring-old-file/정리필요/DataStruct/2.Sum of natural numbers.md",
-    "refactoring-old-file/정리필요/DataStruct/42.이분 검색.md",
-    "refactoring-old-file/정리필요/DataStruct/47. 봉우리.md",
-    "refactoring-old-file/정리필요/DataStruct/73. 최대힙 (STL priority_queue : 우선순위큐).md",
+    "Util",
     "refactoring-old-file/정리필요/DataStruct/82. 순열구하기(dfs 이용).md",
-    "refactoring-old-file/정리필요/DataStruct/86. 피자 배달 거리(dfs활용).md",
-    "refactoring-old-file/정리필요/DataStruct/38. Inversion Sequence.md",
-    "refactoring-old-file/정리필요/DataStruct/91. 네트워크 선 자르기(bottom-up) - 동적계획법.md",
-    "refactoring-old-file/정리필요/DataStruct/76. 이항계수(메모이제이션).md",
-    "refactoring-old-file/정리필요/DataStruct/12.total num (large).md",
-    "refactoring-old-file/정리필요/concept-record/제목 없음 0fc0bf7d795d4691a1018dfee2f9c55e/Untitled.png",
-    "refactoring-old-file/정리필요/linux/linux-commandline-tool",
-    "refactoring-old-file/정리필요/linux/life coding linux",
-    "refactoring-old-file/정리필요/concept-record/제목 없음 0fc0bf7d795d4691a1018dfee2f9c55e",
-    "refactoring-old-file/정리필요/linux",
-    "refactoring-old-file/정리필요/concept-record",
-    "refactoring-old-file/정리필요/DataStruct",
-    "refactoring-old-file/정리필요",
-    "refactoring-old-file/블로그/대용량 서비스",
-    "refactoring-old-file/블로그/inqueue",
-    "refactoring-old-file/블로그",
-    "TIL/refactoring-old-file/정리필요/concept-record/제목 없음 0fc0bf7d795d4691a1018dfee2f9c55e/Untitled.png"
+    "DataStruct/Stack.md",
+    "DataStruct",
+    "refactoring-old-file/정리필요/DataStruct/31. 탄화수소 질량.md",
+    "README.md",
+    "refactoring-old-file",
+    "무제 폴더 1",
+    "NoSQL",
+    "RDB",
+    "Docker",
+    "OS",
+    "refactoring-old-file/날짜별/2023-04-20.md"
   ]
 }
