@@ -21,3 +21,24 @@ Json 문서 기반으로 내부적으로 역파일 색인 구조로 데이터를
 
 ## 2. 시작하기
 
+```
+➜  elasticsearch-8.10.4 bin/elasticsearch -d
+
+어찌저찌 실행됨
+
+➜  elasticsearch-8.10.4 ps -ef | grep elasticsearch
+
+  501 76384     1   0  1:00PM ttys001    0:55.33 /Users/refine/DEV/elasticsearch-8.10.4/jdk.app/Contents/Home/bin/java -Des.networkaddress.cache ~~ 
+  
+➜  elasticsearch-8.10.4 kill 76384
+
+```
+
+bin/elasticsearch 
+-> 을 통해서 실행
+
+ps -ef | grep elasticsearch
+-> 프로세스 실행중임을 확인
+
+kill 76384
+-> 프로세스 종료 ( 본인이 실행한 pid 로 종료)
