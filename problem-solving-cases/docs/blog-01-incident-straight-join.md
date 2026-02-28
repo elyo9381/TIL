@@ -52,7 +52,7 @@
 검증 명령:
 
 ```bash
-cd /Users/yowon/study/til/TIL/problem-solving-cases
+cd problem-solving-cases
 ./gradlew :case-003-join-hint-repro:test --tests "*Case003JoinHint*IntegrationTest" --rerun-tasks
 ```
 

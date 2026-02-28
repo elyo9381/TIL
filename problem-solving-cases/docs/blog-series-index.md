@@ -14,14 +14,14 @@
 
 - [글 구조 설계](https://github.com/elyo9381/TIL/blob/master/problem-solving-cases/docs/blog-structure-cte-straight-join-repro.md)
 - [메인 드래프트](https://github.com/elyo9381/TIL/blob/master/problem-solving-cases/docs/blog-draft-cte-straight-join-repro.md)
-- [최종 회고본](https://github.com/elyo9381/TIL/blob/master/problem-solving-cases/docs/blog-final-movv-join-hint-retrospective.md)
-- [타임라인 분석](https://github.com/elyo9381/TIL/blob/master/problem-solving-cases/docs/movv-maas-global-timeline-analysis.md)
-- [포렌식 리포트](https://github.com/elyo9381/TIL/blob/master/problem-solving-cases/docs/movv-cte-straight-join-forensic-report.md)
+- [최종 회고본](https://github.com/elyo9381/TIL/blob/master/problem-solving-cases/docs/blog-final-legacy-service-join-hint-retrospective.md)
+- [타임라인 분석](https://github.com/elyo9381/TIL/blob/master/problem-solving-cases/docs/legacy-service-maas-global-timeline-analysis.md)
+- [포렌식 리포트](https://github.com/elyo9381/TIL/blob/master/problem-solving-cases/docs/legacy-service-cte-straight-join-forensic-report.md)
 
 ## 검증 명령
 
 ```bash
-cd /Users/yowon/study/til/TIL/problem-solving-cases
+cd problem-solving-cases
 ./gradlew :case-003-join-hint-repro:test --tests "*Case003JoinHint*IntegrationTest" --rerun-tasks
 curl "http://localhost:8080/api/case-003/join-hint/report?serviceType=VIP&limit=20"
 curl "http://localhost:8080/api/case-003/join-hint/benchmark?serviceType=VIP&limit=20&iterations=10"
