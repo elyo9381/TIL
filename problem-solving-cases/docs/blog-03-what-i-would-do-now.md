@@ -68,9 +68,8 @@ cd problem-solving-cases
 
 근거 문서:
 
-- [타임라인 분석](https://github.com/elyo9381/TIL/blob/master/problem-solving-cases/docs/legacy-service-maas-global-timeline-analysis.md)
-- [포렌식 리포트](https://github.com/elyo9381/TIL/blob/master/problem-solving-cases/docs/legacy-service-cte-straight-join-forensic-report.md)
-- [최종 회고본](https://github.com/elyo9381/TIL/blob/master/problem-solving-cases/docs/blog-final-legacy-service-join-hint-retrospective.md)
+- [사건편](https://github.com/elyo9381/TIL/blob/master/problem-solving-cases/docs/blog-01-incident-straight-join.md)
+- [원인편](https://github.com/elyo9381/TIL/blob/master/problem-solving-cases/docs/blog-02-root-cause-structure.md)
 
 ## 결론
 

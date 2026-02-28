@@ -12,11 +12,10 @@
 
 ## 핵심 근거
 
-- [글 구조 설계](https://github.com/elyo9381/TIL/blob/master/problem-solving-cases/docs/blog-structure-cte-straight-join-repro.md)
-- [메인 드래프트](https://github.com/elyo9381/TIL/blob/master/problem-solving-cases/docs/blog-draft-cte-straight-join-repro.md)
-- [최종 회고본](https://github.com/elyo9381/TIL/blob/master/problem-solving-cases/docs/blog-final-legacy-service-join-hint-retrospective.md)
-- [타임라인 분석](https://github.com/elyo9381/TIL/blob/master/problem-solving-cases/docs/legacy-service-maas-global-timeline-analysis.md)
-- [포렌식 리포트](https://github.com/elyo9381/TIL/blob/master/problem-solving-cases/docs/legacy-service-cte-straight-join-forensic-report.md)
+- [case-003 재현 코드](https://github.com/elyo9381/TIL/tree/master/problem-solving-cases/case-003-join-hint-repro)
+- [사건편](https://github.com/elyo9381/TIL/blob/master/problem-solving-cases/docs/blog-01-incident-straight-join.md)
+- [원인편](https://github.com/elyo9381/TIL/blob/master/problem-solving-cases/docs/blog-02-root-cause-structure.md)
+- [현재편](https://github.com/elyo9381/TIL/blob/master/problem-solving-cases/docs/blog-03-what-i-would-do-now.md)
 
 ## 검증 명령
 
@@ -34,15 +33,8 @@ curl "http://localhost:8080/api/case-003/join-hint/benchmark?serviceType=VIP&lim
 - 현재편에서 힌트를 마지막 수단으로 배치했는가
 - 모든 주장에 코드/테스트/문서 링크가 있는가
 
-## Changelog
+## 범위와 한계
 
-- 변경된 내용:
-  - `case-003`에 benchmark API와 `EXPLAIN JSON` 근거를 연결했다.
-  - 사건/원인/현재 3편으로 분리해 한 글의 주장 범위를 좁혔다.
-  - 면접 검증용 `Evidence Packet`을 추가했다.
-- 근거 기반으로 확정 가능한 것:
-  - CTE 전역 사용 패턴
-  - Reservation 축의 `STRAIGHT_JOIN` 도입 이력
-  - 재현 코드에서 hint off/on 플랜 차이
-- 남는 가정/한계:
-  - 당시 운영 DB 절대 성능 지표(P95/P99, QPS, CPU)는 확정하지 않는다.
+- 공개 저장소에는 재현 코드와 3편 본문만 유지한다.
+- 내부 분석/드래프트 문서는 비공개로 분리했다.
+- 당시 운영 DB 절대 성능 지표(P95/P99, QPS, CPU)는 확정하지 않는다.
