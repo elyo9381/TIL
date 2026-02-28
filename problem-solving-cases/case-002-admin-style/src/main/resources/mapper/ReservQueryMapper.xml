@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yowon.psc.case002.reservation.infra.mapper.ReservQueryMapper">
+
+    <select id="findReservList"
+            parameterType="com.yowon.psc.case002.reservation.application.dto.AdminReservSearchCondition"
+            resultType="com.yowon.psc.case002.reservation.infra.mapper.AdminReservListRow">
+        WITH reserv_page AS (
+            SELECT r.rvno, r.tkno, r.status, r.regdt
+            FROM tb_reserv r
+            WHERE r.agno = #{agno}
+            ORDER BY r.regdt DESC
+            LIMIT #{offset}, #{limit}
+        ),
+        pay_agg AS (
+            SELECT p.rvno, SUM(COALESCE(p.price, 0)) AS pay_price
+            FROM tb_pay p
+            WHERE p.rvno IN (SELECT rvno FROM reserv_page)
+            GROUP BY p.rvno
+        )
+        SELECT
+            rp.rvno AS rvno,
+            rp.regdt AS regdt,
+            rp.status AS status,
+            COALESCE(tkl.name, tk.name) AS ticketName,
+            (
+                SELECT json_arrayagg(
+                    json_object(
+                        'runo', rt.runo,
+                        'rsno', rt.rsno,
+                        'origin', rt.origin,
+                        'dest', rt.dest,
+                        'seat', JSON_EXTRACT(rt.ticket, '$.ticket')
+                    )
+                )
+                FROM tb_reserv_ticket rt
+                WHERE rt.rvno = rp.rvno
+                  AND EXISTS (
+                    SELECT 1
+                    FROM tb_ticket_route tr
+                    WHERE tr.runo = rt.runo
+                      AND tr.tkno = rp.tkno
+                  )
+            ) AS itemDTOsJson,
+            COALESCE(pa.pay_price, 0) AS payPrice
+        FROM reserv_page rp
+        JOIN tb_ticket tk ON tk.tkno = rp.tkno
+        LEFT JOIN tb_ticket_lang tkl ON tkl.tkno = tk.tkno AND tkl.locale = #{locale}
+        LEFT JOIN pay_agg pa ON pa.rvno = rp.rvno
+        ORDER BY rp.regdt DESC
+    </select>
+
+</mapper>

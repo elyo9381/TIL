@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    url: jdbc:mysql://${MYSQL_HOST:127.0.0.1}:${MYSQL_PORT:3306}/${MYSQL_DATABASE_CASE002:psc_case002}?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+    username: ${MYSQL_USER_CASE002:${MYSQL_USER:psc}}
+    password: ${MYSQL_PASSWORD_CASE002:${MYSQL_PASSWORD:psc}}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+
+logging:
+  level:
+    org.mybatis: debug
+
+app:
+  schema:
+    auto-create: true
+  seed:
+    enabled: true
+    agno: 10
+    reservation-count: 20
