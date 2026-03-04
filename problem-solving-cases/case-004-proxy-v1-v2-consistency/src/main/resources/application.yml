@@ -1,0 +1,13 @@
+spring:
+  redis:
+    host: ${REDIS_HOST:127.0.0.1}
+    port: ${REDIS_PORT:6379}
+
+app:
+  seed:
+    enabled: true
+    resource-count: 12
+  repro:
+    default-domain: domain-a
+  v1:
+    artificial-race-delay-ms: 8
