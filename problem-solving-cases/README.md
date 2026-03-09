@@ -8,6 +8,7 @@
 - `case-001-n1-cte`: N+1 + CTE 쿼리 최적화 재현
 - `case-002-admin-style`: MOVV admin 조회 스타일(MyBatis + JSON 조합) 재현
 - `case-003-join-hint-repro`: EXPLAIN 플랜 이탈과 `STRAIGHT_JOIN/FORCE INDEX` 대응 재현
+- `case-004-proxy-v1-v2-consistency`: Redis 기반 V1 legacy와 Lua 기반 V2 target의 정합성 비교 재현
 
 ## Prerequisites
 
@@ -41,6 +42,11 @@ docker compose up -d
 
 - `GET /api/case-003/join-hint/report?serviceType=VIP&limit=20`
 - `GET /api/case-003/join-hint/benchmark?serviceType=VIP&limit=20&iterations=10`
+
+## Case 004 API
+
+- `GET /api/case-004/proxy/repro/report?profile=v1-legacy&domain=domain-a&concurrency=200&poolSize=10`
+- `GET /api/case-004/proxy/repro/report?profile=v2-target&domain=domain-a&concurrency=200&poolSize=10`
 
 ## Case 002 Runbook
 
@@ -97,6 +103,37 @@ curl "http://localhost:8080/api/case-003/join-hint/benchmark?serviceType=VIP&lim
 - 응답 형태/조회 건수 비교 가능성
 - 반복 실행 평균 지연(`withoutHint.avgLatencyMs`, `withHint.avgLatencyMs`) 비교 가능성
 
+## Case 004 Runbook
+
+`case-004-proxy-v1-v2-consistency`는 아래 두 경로만 비교합니다.
+
+- `v1-legacy`: read-modify-write 기반 legacy borrow 경로
+- `v2-target`: Lua + requestId 기반 원자 처리 경로
+
+핵심 지표:
+
+- `duplicateLeaseCount`
+- `orphanLeaseCount`
+- `idempotencyMismatchCount`
+
+```bash
+./gradlew :case-004-proxy-v1-v2-consistency:bootRun
+curl "http://localhost:8080/api/case-004/proxy/repro/report?profile=v1-legacy&domain=domain-a&concurrency=200&poolSize=10"
+curl "http://localhost:8080/api/case-004/proxy/repro/report?profile=v2-target&domain=domain-a&concurrency=200&poolSize=10"
+```
+
+테스트 기반 검증:
+
+```bash
+./gradlew :case-004-proxy-v1-v2-consistency:test --rerun-tasks
+```
+
+검증 포인트:
+- V1 legacy에서 중복 할당이 재현되는지
+- V1 legacy에서 orphan lease가 남는지
+- V1 legacy에서 동일 requestId 재호출 불일치가 생기는지
+- V2 target에서 위 3개 지표가 0으로 수렴하는지
+
 ## Writing Draft
 
 - `docs/blog-draft-movv-evolution.md`
@@ -108,8 +145,10 @@ curl "http://localhost:8080/api/case-003/join-hint/benchmark?serviceType=VIP&lim
 ./gradlew :case-001-n1-cte:bootRun
 ./gradlew :case-002-admin-style:bootRun
 ./gradlew :case-003-join-hint-repro:bootRun
+./gradlew :case-004-proxy-v1-v2-consistency:bootRun
 ./gradlew :case-002-admin-style:test --tests "*Case002ReservQueryMapperIntegrationTest" --rerun-tasks
 ./gradlew :case-003-join-hint-repro:test --tests "*Case003JoinHint*IntegrationTest" --rerun-tasks
+./gradlew :case-004-proxy-v1-v2-consistency:test --rerun-tasks
 ```
 
 실행 후 `case-001`은 두 API를 같은 파라미터로 호출해 실제 SQL 횟수와 응답시간을 비교합니다.

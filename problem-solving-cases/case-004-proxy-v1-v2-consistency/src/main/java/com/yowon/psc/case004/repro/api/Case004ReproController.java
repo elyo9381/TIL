@@ -2,7 +2,6 @@ package com.yowon.psc.case004.repro.api;
 
 import com.yowon.psc.case004.repro.application.Case004ReproService;
 import com.yowon.psc.case004.repro.domain.Case004CompareCommand;
-import com.yowon.psc.case004.repro.domain.Case004CompareReport;
 import com.yowon.psc.case004.repro.domain.Case004Profile;
 import com.yowon.psc.case004.repro.domain.Case004ProfileReport;
 import org.springframework.beans.factory.annotation.Value;
@@ -31,40 +30,15 @@ public class Case004ReproController {
         @RequestParam(name = "profile", defaultValue = "v2-target") String profile,
         @RequestParam(name = "domain", required = false) String domain,
         @RequestParam(name = "concurrency", defaultValue = "200") int concurrency,
-        @RequestParam(name = "iterations", defaultValue = "3") int iterations,
-        @RequestParam(name = "poolSize", defaultValue = "10") int poolSize,
-        @RequestParam(name = "appCount", defaultValue = "1") int appCount,
-        @RequestParam(name = "cooldownMinutes", defaultValue = "0") int cooldownMinutes
+        @RequestParam(name = "poolSize", defaultValue = "10") int poolSize
     ) {
         return service.report(
             Case004Profile.from(profile),
             new Case004CompareCommand(
                 domain == null || domain.isBlank() ? defaultDomain : domain,
                 concurrency,
-                iterations,
-                poolSize,
-                appCount,
-                cooldownMinutes
+                poolSize
             )
         );
-    }
-
-    @GetMapping("/compare")
-    public Case004CompareReport compare(
-        @RequestParam(name = "domain", required = false) String domain,
-        @RequestParam(name = "concurrency", defaultValue = "200") int concurrency,
-        @RequestParam(name = "iterations", defaultValue = "3") int iterations,
-        @RequestParam(name = "poolSize", defaultValue = "10") int poolSize,
-        @RequestParam(name = "appCount", defaultValue = "1") int appCount,
-        @RequestParam(name = "cooldownMinutes", defaultValue = "0") int cooldownMinutes
-    ) {
-        return service.compare(new Case004CompareCommand(
-            domain == null || domain.isBlank() ? defaultDomain : domain,
-            concurrency,
-            iterations,
-            poolSize,
-            appCount,
-            cooldownMinutes
-        ));
     }
 }

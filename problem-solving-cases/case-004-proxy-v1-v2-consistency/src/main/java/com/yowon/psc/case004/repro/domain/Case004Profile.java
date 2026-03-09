@@ -1,8 +1,7 @@
 package com.yowon.psc.case004.repro.domain;
 
 public enum Case004Profile {
-    V1_P3("v1-p3"),
-    V1_P4("v1-p4"),
+    V1_LEGACY("v1-legacy"),
     V2_TARGET("v2-target");
 
     private final String code;

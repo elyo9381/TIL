@@ -24,20 +24,27 @@ class Case004ConsistencyApiIntegrationTest extends RedisIntegrationTestSupport {
     private MockMvc mockMvc;
 
     @Test
-    void compareApiShouldReturnThreeProfilesAndCoreMetrics() throws Exception {
-        mockMvc.perform(get("/api/case-004/proxy/repro/compare")
+    void reportApiShouldReturnOnlyCoreConsistencyMetrics() throws Exception {
+        mockMvc.perform(get("/api/case-004/proxy/repro/report")
+                .param("profile", "v1-legacy")
                 .param("domain", "domain-a")
                 .param("concurrency", "120")
-                .param("iterations", "2")
-                .param("poolSize", "10")
-                .param("appCount", "1")
-                .param("cooldownMinutes", "0"))
+                .param("poolSize", "10"))
             .andExpect(status().isOk())
-            .andExpect(jsonPath("$.domain").value("domain-a"))
-            .andExpect(jsonPath("$.v1P3.profile").value("v1-p3"))
-            .andExpect(jsonPath("$.v1P4.profile").value("v1-p4"))
-            .andExpect(jsonPath("$.v2Target.profile").value("v2-target"))
-            .andExpect(jsonPath("$.v1P3.duplicateLeaseCount").isNumber())
-            .andExpect(jsonPath("$.v2Target.duplicateLeaseCount").isNumber());
+            .andExpect(jsonPath("$.profile").value("v1-legacy"))
+            .andExpect(jsonPath("$.duplicateLeaseCount").isNumber())
+            .andExpect(jsonPath("$.orphanLeaseCount").isNumber())
+            .andExpect(jsonPath("$.idempotencyMismatchCount").isNumber())
+            .andExpect(jsonPath("$.avgLatencyMs").doesNotExist())
+            .andExpect(jsonPath("$.p95LatencyMs").doesNotExist())
+            .andExpect(jsonPath("$.maxLatencyMs").doesNotExist())
+            .andExpect(jsonPath("$.successCount").doesNotExist())
+            .andExpect(jsonPath("$.failCount").doesNotExist());
+    }
+
+    @Test
+    void compareApiShouldBeRemoved() throws Exception {
+        mockMvc.perform(get("/api/case-004/proxy/repro/compare"))
+            .andExpect(status().is4xxClientError());
     }
 }
