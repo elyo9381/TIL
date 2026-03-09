@@ -9,6 +9,7 @@
 - `case-002-admin-style`: MOVV admin 조회 스타일(MyBatis + JSON 조합) 재현
 - `case-003-join-hint-repro`: EXPLAIN 플랜 이탈과 `STRAIGHT_JOIN/FORCE INDEX` 대응 재현
 - `case-004-proxy-v1-v2-consistency`: Redis 기반 V1 legacy와 Lua 기반 V2 target의 정합성 비교 재현
+- `case-005-proxy-lua-minimal-repro`: Lua 필요성을 설명하기 위한 최소 borrow 정합성 재현
 
 ## Prerequisites
 
@@ -153,3 +154,16 @@ curl "http://localhost:8080/api/case-004/proxy/repro/report?profile=v2-target&do
 
 실행 후 `case-001`은 두 API를 같은 파라미터로 호출해 실제 SQL 횟수와 응답시간을 비교합니다.
 `case-001` metric은 요청 1회 스냅샷입니다(`sampleCount=1`, `p95LatencyMs=현재 요청 latency`).
+
+
+## Case 005
+
+`case-005-proxy-lua-minimal-repro`는 블로그 설명용 최소 재현 모듈입니다.
+운영 전체 구조가 아니라 아래 두 장면만 다룹니다.
+
+- 동시 borrow에서 V1 중복 할당 가능성
+- retry / 부분 실패에서 V1 orphan 가능성과 V2 requestId 재사용
+
+```bash
+./gradlew :case-005-proxy-lua-minimal-repro:test --rerun-tasks
+```
