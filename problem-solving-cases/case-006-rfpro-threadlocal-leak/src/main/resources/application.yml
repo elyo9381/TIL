@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: case-006-rfpro-threadlocal-leak
+  main:
+    web-application-type: servlet
+
+server:
+  port: 8086
+
+# EndpointConfig 더미 설정 (실제 외부 API 호출 안 함, mock 사용)
+app:
+  http:
+    endpoint-map:
+      mock-target.local:
+        max-connection-per-sec: 100
+        use-proxy: false
+        default-header:
+          User-Agent: "case-006-lab/1.0"
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+
+logging:
+  level:
+    com.til.case006: DEBUG
+    com.til.case006.client.BaseClient: INFO

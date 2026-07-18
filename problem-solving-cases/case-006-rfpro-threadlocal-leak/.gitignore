@@ -1,0 +1,33 @@
+# Build
+build/
+out/
+.gradle/
+
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# OS
+.DS_Store
+
+# JVM
+*.hprof
+*.hprof.*
+hs_err_*.log
+gc.log
+gc.log.*
+
+# Heap dumps directory (lab 자체 생성용 - 절대 commit 금지)
+dumps/
+*.dump
+
+# Logs
+logs/
+*.log
+
+# Application
+application-local.yml
+application-local.properties
+.env
+.env.local
